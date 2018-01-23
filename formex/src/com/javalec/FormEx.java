@@ -48,6 +48,7 @@ public class FormEx extends HttpServlet {
 		String[] hobbys = request.getParameterValues("hobby"); 
 		String major = request.getParameter("major");
 		String protocal = request.getParameter("protocal");
+		String hidden = request.getParameter("hidden");
 		
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter wirter = response.getWriter();
@@ -58,6 +59,7 @@ public class FormEx extends HttpServlet {
 		wirter.println("취미: " + Arrays.toString(hobbys) + "<br>");
 		wirter.println("전공: " + major + "<br>");
 		wirter.println("프로토콜: " + protocal + "<br>");
+		wirter.println("히든값: " + hidden + "<br>");
 		wirter.println("</body></html>");
 		
 		wirter.close();
